@@ -1,0 +1,66 @@
+{
+  "ts": "2026-11-17T10:59:49",
+  "gate_verdict": "FAIL",
+  "tipo": "drill locale dichiarato",
+  "richieste": [
+    {
+      "n": 1,
+      "request_id": "req_01",
+      "versione_chiesta": "v1",
+      "versione_servita": "v1",
+      "run_id_servita": "run_20261117_105931_de4e67",
+      "n_feature": 30,
+      "status": 200,
+      "expected_status": 200,
+      "coerente": true,
+      "prediction": 0,
+      "probability": 0.2979,
+      "ms": 2.92
+    },
+    {
+      "n": 2,
+      "request_id": "req_02",
+      "versione_chiesta": "v2",
+      "versione_servita": "v2",
+      "run_id_servita": "run_20261117_105937_750adb",
+      "n_feature": 30,
+      "status": 200,
+      "expected_status": 200,
+      "coerente": true,
+      "prediction": 0,
+      "probability": 0.4897,
+      "ms": 13.77
+    },
+    {
+      "n": 3,
+      "request_id": "req_03",
+      "versione_chiesta": "v1",
+      "versione_servita": "v1",
+      "run_id_servita": "run_20261117_105931_de4e67",
+      "n_feature": 30,
+      "status": 200,
+      "expected_status": 200,
+      "coerente": true,
+      "prediction": 1,
+      "probability": 0.8871,
+      "ms": 2.77
+    },
+    {
+      "n": 4,
+      "request_id": "req_04",
+      "versione_chiesta": "v1",
+      "versione_servita": null,
+      "run_id_servita": null,
+      "n_feature": 29,
+      "status": 422,
+      "expected_status": 422,
+      "coerente": true,
+      "prediction": null,
+      "probability": null,
+      "ms": 2.08
+    }
+  ],
+  "error_rate": 0.25,
+  "error_rate_atteso": 0.25,
+  "nota": "L'error rate del drill e' tenuto separato dalle misure della probe."
+}

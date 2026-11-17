@@ -1,0 +1,84 @@
+{
+  "project": "Progetto 8 - Esaurimento delle scorte di magazzino",
+  "active": "v1",
+  "previous": "v2",
+  "transitions": [
+    {
+      "ts": "2026-11-17T10:59:49",
+      "azione": "activate v2",
+      "stato_prima": "v1",
+      "stato_dopo": "v2",
+      "run_id": "run_20261117_105937_750adb",
+      "artifact_sha256": "bd77d9ef67baea059057447562302846ef3210a47e0571c133162401cdc52f2c"
+    },
+    {
+      "ts": "2026-11-17T10:59:49",
+      "azione": "activate v1",
+      "stato_prima": "v2",
+      "stato_dopo": "v1",
+      "run_id": "run_20261117_105931_de4e67",
+      "artifact_sha256": "a7c2627d2f5a4f0a07115d9c08d9974bf97e4fbe46aef04ca12610dea547bf07"
+    }
+  ],
+  "models": {
+    "v1": {
+      "version": "v1",
+      "run_id": "run_20261117_105931_de4e67",
+      "dir": "artifacts/v1",
+      "artifact_sha256": "a7c2627d2f5a4f0a07115d9c08d9974bf97e4fbe46aef04ca12610dea547bf07",
+      "dataset_sha256": "1c4079eb206996971d7722194050a344b4f47bc16d8963829bc0ad13f355fb60",
+      "model": "Baseline: StandardScaler + LogisticRegression",
+      "params": {
+        "max_iter": 1000,
+        "random_state": 1308,
+        "solver": "lbfgs"
+      },
+      "stage": "Production",
+      "mlflow_logged": true,
+      "metrics": {
+        "accuracy": 0.71,
+        "precision_class_1": 0.6667,
+        "recall_class_1": 0.5128,
+        "f1_class_1": 0.5797,
+        "confusion_matrix": {
+          "tn": 102,
+          "fp": 20,
+          "fn": 38,
+          "tp": 40
+        },
+        "latency_ms_per_row_batch": 0.0019
+      }
+    },
+    "v2": {
+      "version": "v2",
+      "run_id": "run_20261117_105937_750adb",
+      "dir": "artifacts/v2",
+      "artifact_sha256": "bd77d9ef67baea059057447562302846ef3210a47e0571c133162401cdc52f2c",
+      "dataset_sha256": "1c4079eb206996971d7722194050a344b4f47bc16d8963829bc0ad13f355fb60",
+      "model": "Candidata: HistGradientBoostingClassifier con pesi di classe bilanciati",
+      "params": {
+        "max_iter": 400,
+        "learning_rate": 0.05,
+        "max_depth": 3,
+        "min_samples_leaf": 20,
+        "l2_regularization": 1.0,
+        "random_state": 1308
+      },
+      "stage": "Archived",
+      "mlflow_logged": true,
+      "metrics": {
+        "accuracy": 0.655,
+        "precision_class_1": 0.5542,
+        "recall_class_1": 0.5897,
+        "f1_class_1": 0.5714,
+        "confusion_matrix": {
+          "tn": 85,
+          "fp": 37,
+          "fn": 32,
+          "tp": 46
+        },
+        "latency_ms_per_row_batch": 0.0374
+      }
+    }
+  }
+}

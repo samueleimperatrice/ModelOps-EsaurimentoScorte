@@ -1,0 +1,3 @@
+# Dipendenza opzionale: registra le run di training in MLflow (tracking locale in ./mlruns).
+# Il progetto funziona anche senza: train.py salta la registrazione e lo segnala.
+mlflow>=2.14

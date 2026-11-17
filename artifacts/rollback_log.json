@@ -1,0 +1,28 @@
+{
+  "ts": "2026-11-17T10:59:49",
+  "motivo": "drill di ripristino alla baseline",
+  "transizioni": [
+    {
+      "ts": "2026-11-17T10:59:49",
+      "azione": "activate v2",
+      "stato_prima": "v1",
+      "stato_dopo": "v2",
+      "run_id": "run_20261117_105937_750adb",
+      "artifact_sha256": "bd77d9ef67baea059057447562302846ef3210a47e0571c133162401cdc52f2c"
+    },
+    {
+      "ts": "2026-11-17T10:59:49",
+      "azione": "activate v1",
+      "stato_prima": "v2",
+      "stato_dopo": "v1",
+      "run_id": "run_20261117_105931_de4e67",
+      "artifact_sha256": "a7c2627d2f5a4f0a07115d9c08d9974bf97e4fbe46aef04ca12610dea547bf07"
+    }
+  ],
+  "stato_finale": {
+    "active_version": "v1",
+    "active_run_id": "run_20261117_105931_de4e67",
+    "artifact_sha256": "a7c2627d2f5a4f0a07115d9c08d9974bf97e4fbe46aef04ca12610dea547bf07",
+    "coincide_con_baseline_v1": true
+  }
+}

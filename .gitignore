@@ -1,0 +1,41 @@
+# --- Ambienti virtuali ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# --- MLflow (rigenerati dalla pipeline) ---
+mlruns/
+mlflow.db
+
+# --- Log ---
+logs/
+*.log
+*.out
+
+# --- Segreti / configurazione locale ---
+.env
+.env.*
+!.env.example
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.swp
+
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini

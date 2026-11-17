@@ -1,0 +1,71 @@
+{
+  "verdict": "FAIL",
+  "active_version_prima_del_gate": "v1",
+  "candidata": "v2",
+  "baseline": "v1",
+  "metrica_soggetto": "recall_class_1_esaurimento",
+  "regola_dichiarata_prima_dei_risultati": true,
+  "requisiti": [
+    {
+      "requisito": "R1",
+      "misura": "accuracy v2=0.655 - v1=0.71",
+      "soglia": ">= 0",
+      "esito": "FAIL",
+      "motivazione": "protocollo comune: la candidata non deve peggiorare l'accuratezza",
+      "fonte": "artefatto bd77d9ef67ba..."
+    },
+    {
+      "requisito": "R2",
+      "misura": "recall classe 1 v2=0.5897 - v1=0.5128",
+      "soglia": ">= 0",
+      "esito": "PASS",
+      "motivazione": "metrica del soggetto (classe 1 = esaurimento): un falso negativo e' una vendita persa",
+      "fonte": "validation dataset.csv"
+    },
+    {
+      "requisito": "R3",
+      "misura": "p95 v2=13.33 ms",
+      "soglia": "<= 120.0 ms",
+      "esito": "PASS",
+      "motivazione": "vincolo operativo del laboratorio (p95 locale <= 120 ms)",
+      "fonte": "probe su v2, fingerprint bd77d9ef67ba..."
+    },
+    {
+      "requisito": "R4",
+      "misura": "error rate v2=0.0 su 30 richieste valide",
+      "soglia": "<= 0.01",
+      "esito": "PASS",
+      "motivazione": "vincolo operativo del laboratorio: le richieste valide non devono fallire",
+      "fonte": "probe su v2"
+    }
+  ],
+  "confronto_metriche": {
+    "v1": {
+      "accuracy": 0.71,
+      "precision_class_1": 0.6667,
+      "recall_class_1": 0.5128,
+      "f1_class_1": 0.5797,
+      "confusion_matrix": {
+        "tn": 102,
+        "fp": 20,
+        "fn": 38,
+        "tp": 40
+      },
+      "latency_ms_per_row_batch": 0.0019
+    },
+    "v2": {
+      "accuracy": 0.655,
+      "precision_class_1": 0.5542,
+      "recall_class_1": 0.5897,
+      "f1_class_1": 0.5714,
+      "confusion_matrix": {
+        "tn": 85,
+        "fp": 37,
+        "fn": 32,
+        "tp": 46
+      },
+      "latency_ms_per_row_batch": 0.0374
+    }
+  },
+  "nota": "Un miglioramento di accuracy non compensa una violazione della latenza."
+}

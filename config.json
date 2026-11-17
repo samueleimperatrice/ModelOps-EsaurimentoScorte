@@ -1,0 +1,25 @@
+{
+  "project": "Progetto 8 - Esaurimento delle scorte di magazzino",
+  "seed": 1308,
+  "data_path": "dataset.csv",
+  "requests_path": "richieste_monitoraggio.csv",
+  "artifacts_dir": "artifacts",
+  "logs_dir": "logs",
+  "service": {
+    "host": "127.0.0.1",
+    "port": 8000,
+    "metrics_window_seconds": 900
+  },
+  "gate": {
+    "max_p95_ms": 120.0,
+    "max_error_rate_valid": 0.01,
+    "require_accuracy_not_worse": true,
+    "require_recall_not_worse": true,
+    "subject_metric": "recall_class_1_esaurimento"
+  },
+  "probe": {
+    "warmup": 3,
+    "measures": 30,
+    "payload_request_id": "req_01"
+  }
+}
